@@ -1,7 +1,15 @@
-https://codeload.github.com/sanjisama6287/pyrogram/zip/refs/heads/dev
-TgCrypto
-pyromod
-pymongo
+# --- For-Bot-Working --------- #
+pyrogram 
+TgCrypto 
+pyromod==1.5
+
+# --- For-Database ------------ #
+pymongo 
+dnspython 
 motor  # Async driver for MongoDB
-dnspython
-aiohttp
+
+# --- For-Web-Response ------- #
+aiohttp 
+
+# --- Advance-Format --- #
+pyrofork
