@@ -1,4 +1,4 @@
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
+# +++ Made By King [telegram username: @Shidoteshika1] +++
 
 import base64
 import re
@@ -234,5 +234,3 @@ def get_readable_time(seconds: int) -> str:
 subscribed = filters.create(is_subscribed)
 is_admin = filters.create(check_admin)
 banUser = filters.create(check_banUser)
-
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++

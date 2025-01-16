@@ -1,4 +1,4 @@
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
+# +++ Made By King [telegram username: @Shidoteshika1] +++
 
 from aiohttp import web
 from plugins import web_server
@@ -51,7 +51,7 @@ class Bot(Client):
             sys.exit()
 
         self.set_parse_mode(ParseMode.HTML)
-        self.LOGGER(__name__).info(f"ᴀᴅᴠᴀɴᴄᴇᴅ ғɪʟᴇ sʜᴀʀɪɴɢ ʙᴏᴛ V3 ʀᴇᴄᴏʀᴅᴇᴅ ʙʏ ➪ @Urr_Sanjiii [Tᴇʟᴇɢʀᴀᴍ Usᴇʀɴᴀᴍᴇ]")
+        self.LOGGER(__name__).info(f"ᴀᴅᴠᴀɴᴄᴇ ғɪʟᴇ-sʜᴀʀɪɴɢ ʙᴏᴛ V3 ᴍᴀᴅᴇ ʙʏ ➪ @Urr_Sanjiii [Tᴇʟᴇɢʀᴀᴍ Usᴇʀɴᴀᴍᴇ]")
         self.LOGGER(__name__).info(f"{self.name} Bot Running..!")
         self.LOGGER(__name__).info(f"OPERATION SUCCESSFULL ✅")
         #web-response
