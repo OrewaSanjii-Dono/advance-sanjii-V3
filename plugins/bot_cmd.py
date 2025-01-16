@@ -1,4 +1,4 @@
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
+# +++ Made By King [telegram username: @Shidoteshika1] +++
 
 import os
 import asyncio
@@ -98,11 +98,11 @@ async def send_text(client: Bot, message: Message):
 
 <blockquote>⏳:</b> [{progress_bar}] <code>{percent_complete:.0%}</code></blockquote>
 
-<b>🚻 Total Users: <code>{total}</code>
-✅ Sucessful: <code>{successful}</code>
-🚫 Blocked Users: <code>{blocked}</code>
-⚠️ Deleted Accounts: <code>{deleted}</code>
-❌ Unsuccessful: <code>{unsuccessful}</code></b>
+<b>🚻 ᴛᴏᴛᴀʟ ᴜsᴇʀs: <code>{total}</code>
+✅ sᴜᴄᴄᴇssғᴜʟ: <code>{successful}</code>
+🚫 ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs: <code>{blocked}</code>
+⚠️ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs: <code>{deleted}</code>
+❌ ᴜɴsᴜᴄᴄᴇssғᴜʟ: <code>{unsuccessful}</code></b>
 
 <i>➪ ᴛᴏ sᴛᴏᴘ ᴛʜᴇ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ᴄʟɪᴄᴋ: <b>/cancel</b></i>"""
                 await pls_wait.edit(status_update)
@@ -113,11 +113,11 @@ async def send_text(client: Bot, message: Message):
 
 <blockquote>Dᴏɴᴇ:</b> [{final_progress_bar}] {percent_complete:.0%}</blockquote>
 
-<b>🚻 Total Users: <code>{total}</code>
-✅ Sucessful: <code>{successful}</code>
-🚫 Blocked Users: <code>{blocked}</code>
-⚠️ Deleted Accounts: <code>{deleted}</code>
-❌ Unsuccessful: <code>{unsuccessful}</code></b>"""
+<b>🚻 ᴛᴏᴛᴀʟ ᴜsᴇʀs: <code>{total}</code>
+✅ sᴜᴄᴄᴇssғᴜʟ: <code>{successful}</code>
+🚫 ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs: <code>{blocked}</code>
+⚠️ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs: <code>{deleted}</code>
+❌ ᴜɴsᴜᴄᴄᴇssғᴜʟ: <code>{unsuccessful}</code></b>"""
         return await pls_wait.edit(final_status)
 
     else:
@@ -131,7 +131,7 @@ async def info(client: Bot, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
     
     start_time = time.time()
-    temp_msg = await message.reply("<b><i>Processing....</i></b>", quote=True)  # Temporary message
+    temp_msg = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)  # Temporary message
     end_time = time.time()
     
     # Calculate ping time in milliseconds
@@ -166,13 +166,13 @@ async def user_setting_commands(client: Client, message: Message):
     await message.reply(text=USER_CMD_TXT, reply_markup=InlineKeyboardMarkup(button), quote=True)
 
     
-HELP = "https://envs.sh/NyS.jpg"
+HELP = "https://graph.org//file/10f310dd6a7cb56ad7c0b.jpg"
 @Bot.on_message(filters.command('help') & filters.private & ~banUser)
 async def help(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton("• ᴏᴡɴᴇʀ", url="https://t.me/DATTEBAYO56"), 
-            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ •", url="https://t.me/urr_sanjiii")
+            InlineKeyboardButton("🔥ᴏᴡɴᴇʀ", url="https://t.me/DATTEBAYO56"), 
+            InlineKeyboardButton("👨‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/URR_SANJIII")
         ]
     ]
     if SUPPORT_GROUP:
@@ -193,6 +193,5 @@ async def help(client: Client, message: Message):
             message_effect_id = 5046509860389126442 #🎉
         )
     except Exception as e:
-        return await message.reply(f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @Urr_Sanjiii</i></b>\n<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
+        return await message.reply(f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @URR_SANJIII</i></b>\n<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
    
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++

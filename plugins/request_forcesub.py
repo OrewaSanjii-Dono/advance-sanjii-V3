@@ -1,4 +1,4 @@
-# +++ Made By Orewa Sanjii [telegram username: @Urr_Sanjiii] +++
+# +++ Made By [telegram username: @JeffrySama] +++
 
 from bot import Bot
 from database.database import kingdb
@@ -35,4 +35,6 @@ async def handle_join_request(client, chat_join_request):
             await kingdb.reqSent_user(chat_id, user_id)
 
         
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
+
+  
+

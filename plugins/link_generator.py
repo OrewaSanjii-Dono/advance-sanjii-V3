@@ -1,4 +1,4 @@
-# +++ Made By [telegram username: @Urr_Sanjiii] +++
+# +++ Made By [telegram username: @JeffySama] +++
 
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
@@ -18,12 +18,12 @@ async def batch(client: Client, message: Message):
         if f_msg_id:
             break
         else:
-            await first_message.reply(f"<b>❌ ᴇʀʀᴏʀ..\n<blockquote>ᴛʜɪs ғᴏʀᴡᴀʀᴅ ᴘᴏsᴛ ᴏʀ ᴍᴇssᴀɢᴇ ʟɪɴᴋ ɪs ɴᴏᴛ ғʀᴏᴍ ᴍʏ {channel}</blockquote></b>", quote = True, disable_web_page_preview=True)
+            await first_message.reply(f"<b>❌ ᴇʀʀᴏʀ..\n<blockquote>ᴛʜɪs ғᴏʀᴡᴀʀᴅᴇᴅ ᴘᴏsᴛ ᴏʀ ᴍᴇssᴀɢᴇ ʟɪɴᴋ ɪs ɴᴏᴛ ғʀᴏᴍ ᴍʏ {channel}</blockquote></b>", quote = True, disable_web_page_preview=True)
             continue
 
     while True:
         try:
-            second_message = await client.ask(text =f"<b><blockquote>ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ʟᴀsᴛ ᴍᴇssᴀɢᴇ ғʀᴏᴍ {channel} (ᴡɪᴛʜ ǫᴜᴏᴛᴇs)..</blockquote>\n<blockquote>ᴏʀ sᴇɴᴅ ᴛʜᴇ {channel} ᴘᴏsᴛ ʟɪɴᴋ</blockquote></b>", chat_id = message.from_user.id, filters=(filters.forwarded | (filters.text & ~filters.forwarded)), timeout=60, disable_web_page_preview=True)
+            second_message = await client.ask(text =f"<b><blockquote>ғᴏʀᴡᴀʀᴅ ᴛʜᴇ Lᴀsᴛ ᴍᴇssᴀɢᴇ ғʀᴏᴍ {channel} (ᴡɪᴛʜ ǫᴜᴏᴛᴇs)..</blockquote>\n<blockquote>ᴏʀ sᴇɴᴅ ᴛʜᴇ {channel} ᴘᴏsᴛ ʟɪɴᴋ</blockquote></b>", chat_id = message.from_user.id, filters=(filters.forwarded | (filters.text & ~filters.forwarded)), timeout=60, disable_web_page_preview=True)
         except:
             return
         s_msg_id = await get_message_id(client, second_message)
@@ -38,7 +38,7 @@ async def batch(client: Client, message: Message):
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("📫 Sʜᴀʀᴇ URL", url=f'https://telegram.me/share/url?url={link}')]])
-    await second_message.reply_text(f"<b>ʙᴇʟᴏᴡ ɪs ʏᴏᴜʀ ʟɪɴᴋ:</b>\n<blockquote>{link}</blockquote>", quote=True, reply_markup=reply_markup, disable_web_page_preview=True)
+    await second_message.reply_text(f"<b>›› ʙᴇʟᴏᴡ ɪs ʏᴏᴜʀ ʟɪɴᴋ:</b>\n<blockquote>{link}</blockquote>", quote=True, reply_markup=reply_markup, disable_web_page_preview=True)
 
 
 @Bot.on_message(filters.command('genlink') & filters.private & is_admin)
@@ -59,7 +59,4 @@ async def link_generator(client: Client, message: Message):
     base64_string = await encode(f"get-{msg_id * abs(client.db_channel.id)}")
     link = f"https://t.me/{client.username}?start={base64_string}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("📫 Sʜᴀʀᴇ URL", url=f'https://telegram.me/share/url?url={link}')]])
-    await channel_message.reply_text(f"<b>ʙᴇʟᴏᴡ ɪs ʏᴏᴜʀ ʟɪɴᴋ:</b>\n<blockquote>{link}</blockquote>", quote=True, reply_markup=reply_markup, disable_web_page_preview=True)
-
-
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
+    await channel_message.reply_text(f"<b>›› ʙᴇʟᴏᴡ ɪs ʏᴏᴜʀ ʟɪɴᴋ:</b>\n<blockquote>{link}</blockquote>", quote=True, reply_markup=reply_markup, disable_web_page_preview=True)

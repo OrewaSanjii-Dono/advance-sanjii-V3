@@ -1,4 +1,4 @@
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
+# +++ Made By King [telegram username: @Shidoteshika1] +++
 
 from bot import Bot
 import asyncio
@@ -15,12 +15,12 @@ from database.database import kingdb
 #Advance commands for adding force sub....
 @Bot.on_message(filters.command('add_fsub') & filters.private & filters.user(OWNER_ID))
 async def add_forcesub(client:Client, message:Message):
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     check=0
     channel_ids = await kingdb.get_all_channels()
     fsubs = message.text.split()[1:]
 
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
     
     if not fsubs:
         await pro.edit("<b>ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴀᴅᴅ ᴄʜᴀɴɴᴇʟ ɪᴅs\n<blockquote><u>EXAMPLE</u> :\n/add_fsub [channel_ids] :</b> ʏᴏᴜ ᴄᴀɴ ᴀᴅᴅ ᴏɴᴇ ᴏʀ ᴍᴜʟᴛɪᴘʟᴇ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴀᴛ ᴀ ᴛɪᴍᴇ.</blockquote>", reply_markup=reply_markup)
@@ -69,7 +69,7 @@ async def add_forcesub(client:Client, message:Message):
 
 @Bot.on_message(filters.command('del_fsub') & filters.private & filters.user(OWNER_ID))
 async def delete_all_forcesub(client:Client, message:Message):
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     channels = await kingdb.get_all_channels()
     fsubs = message.text.split()[1:]
 
@@ -101,9 +101,9 @@ async def delete_all_forcesub(client:Client, message:Message):
                     
                 passed += f"<blockquote><code>{id}</code> ✅</blockquote>\n"
             else:
-                passed += f"<b><blockquote><code>{id}</code> ɴᴏᴛ ɪɴ ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs </blockquote></b>\n"
+                passed += f"<b><blockquote><code>{id}</code> ɴᴏᴛ ɪɴ ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs</blockquote></b>\n"
                 
-        await pro.edit(f"<b>⛔️ ᴘʀᴏᴠɪᴅᴇᴅ ᴄʜᴀɴɴᴇʟ ɪᴅs ᴀʀᴇ ᴅᴇʟᴇᴛᴇᴅ :\n\n{passed}</b>", reply_markup=reply_markup)
+        await pro.edit(f"<b>⛔️ ᴘʀᴏᴠɪᴅᴇᴅ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴀʀᴇ ᴅᴇʟᴇᴛᴇᴅ :\n\n{passed}</b>", reply_markup=reply_markup)
         
     else:
         await pro.edit("<b><blockquote>⁉️ ɴᴏ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛᴏ ᴅᴇʟᴇᴛᴇ</blockquote></b>", reply_markup=reply_markup)
@@ -111,7 +111,7 @@ async def delete_all_forcesub(client:Client, message:Message):
 
 @Bot.on_message(filters.command('fsub_chnl') & filters.private & is_admin)
 async def get_forcesub(client:Client, message: Message):
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     channels = await kingdb.get_all_channels()
     channel_list = "<b><blockquote>❌ ɴᴏ ғᴏʀᴄᴇ sᴜʙ ᴄʜᴀɴɴᴇʟ ғᴏᴜɴᴅ !</b></blockquote>"
     if channels:
@@ -133,13 +133,13 @@ async def get_forcesub(client:Client, message: Message):
                 
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
     await message.reply_chat_action(ChatAction.CANCEL)
-    await pro.edit(f"<b>ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs ʟɪsᴛ :</b>\n\n{channel_list}", reply_markup=reply_markup, disable_web_page_preview = True)
+    await pro.edit(f"<b>›› ғᴏʀᴄᴇ sᴜʙ ᴄʜᴀɴɴᴇʟs ʟɪsᴛ :</b>\n\n{channel_list}", reply_markup=reply_markup, disable_web_page_preview = True)
 
 
 #Commands for adding Admins by Owner
 @Bot.on_message(filters.command('add_admins') & filters.private & filters.user(OWNER_ID))
 async def add_admins(client:Client, message:Message):        
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     check = 0
     admin_ids = await kingdb.get_all_admins()
     admins = message.text.split()[1:]
@@ -181,7 +181,7 @@ async def add_admins(client:Client, message:Message):
 
 @Bot.on_message(filters.command('del_admins') & filters.private & filters.user(OWNER_ID))
 async def delete_admins(client:Client, message:Message):        
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     admin_ids = await kingdb.get_all_admins()
     admins = message.text.split()[1:]
 
@@ -222,9 +222,9 @@ async def delete_admins(client:Client, message:Message):
 
 @Bot.on_message(filters.command('admin_list') & filters.private & filters.user(OWNER_ID))
 async def get_admin_list(client:Client, message: Message):        
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     admin_ids = await kingdb.get_all_admins()
-    admin_list = "<b><blockquote>❌ ɴᴏ ᴀᴅᴍɪɴs ɪᴅ ʟɪsᴛ ғᴏᴜɴᴅ ! !</blockquote></b>"
+    admin_list = "<b><blockquote>❌ ɴᴏ ᴀᴅᴍɪɴ ɪᴅ ʟɪsᴛ ғᴏᴜɴᴅ !</blockquote></b>"
     
     if admin_ids:
         admin_list = ""
@@ -242,13 +242,13 @@ async def get_admin_list(client:Client, message: Message):
                 
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
     await message.reply_chat_action(ChatAction.CANCEL)
-    await pro.edit(f"<b>🤖 ʙᴏᴛs ᴀᴅᴍɪɴ ʟɪsᴛ :</b>\n\n{admin_list}", reply_markup=reply_markup, disable_web_page_preview = True)
+    await pro.edit(f"<b>›› ʙᴏᴛ's ᴀᴅᴍɪɴ ʟɪsᴛ:</b>\n\n{admin_list}", reply_markup=reply_markup, disable_web_page_preview = True)
 
 
 #Commands for banned user function............
 @Bot.on_message(filters.command('add_banuser') & filters.private & is_admin)
 async def add_banuser(client:Client, message:Message):        
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     check, autho_users = 0, []
     banuser_ids = await kingdb.get_ban_users()
     autho_users = await kingdb.get_all_admins(); autho_users.append(OWNER_ID)
@@ -289,13 +289,13 @@ async def add_banuser(client:Client, message:Message):
         await pro.edit(f'<b>ɴᴇᴡ ɪᴅs ᴀᴅᴅᴇᴅ ɪɴ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ʟɪsᴛ ✅</b>\n\n{banuser_list}', reply_markup=reply_markup)
         
     else:
-        await pro.edit(f'<b>❌ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ ᴀᴅᴅɪɴɢ ʙᴀɴɴᴇᴅ ᴜsᴇʀs</b>\n\n{banuser_list.strip()}\n\n<b><i>ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ...</i></b>', reply_markup=reply_markup)
+        await pro.edit(f'<b>❌ ᴇʀʀᴏʀ oᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ ᴀᴅᴅɪɴɢ ʙᴀɴɴᴇᴅ ᴜsᴇʀs</b>\n\n{banuser_list.strip()}\n\n<b><i>ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ...</i></b>', reply_markup=reply_markup)
     #await update_fsub(1)
 
 
 @Bot.on_message(filters.command('del_banuser') & filters.private & is_admin)
 async def delete_banuser(client:Client, message:Message):        
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     banuser_ids = await kingdb.get_ban_users()
     banusers = message.text.split()[1:]
 
@@ -311,7 +311,7 @@ async def delete_banuser(client:Client, message:Message):
             ids = "\n".join(f"<blockquote><code>{user}</code> ✅</blockquote>" for user in banuser_ids)
             return await pro.edit(f"<b>⛔️ ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ ᴀʀᴇ ᴅᴇʟᴇᴛᴇᴅ :\n{ids}</b>", reply_markup=reply_markup)
         else:
-            return await pro.edit("<b><blockquote>⁉️ɴᴏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ ʟɪsᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛᴏ ᴅᴇʟᴇᴛᴇ</blockquote></b>", reply_markup=reply_markup)
+            return await pro.edit("<b><blockquote>⁉️ ɴᴏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ ʟɪsᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛᴏ ᴅᴇʟᴇᴛᴇ</blockquote></b>", reply_markup=reply_markup)
   
     if len(banuser_ids) >= 1:
         passed = ''
@@ -336,7 +336,7 @@ async def delete_banuser(client:Client, message:Message):
 
 @Bot.on_message(filters.command('banuser_list') & filters.private & is_admin)
 async def get_banuser_list(client:Client, message: Message):        
-    pro = await message.reply("<b><i>Processing....</i></b>", quote=True)
+    pro = await message.reply("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     
     banuser_ids = await kingdb.get_ban_users()
     banuser_list = "<b><blockquote>❌ ɴᴏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ ʟɪsᴛ ғᴏᴜɴᴅ !</blockquote></b>"
@@ -357,7 +357,7 @@ async def get_banuser_list(client:Client, message: Message):
                 
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
     await message.reply_chat_action(ChatAction.CANCEL)
-    await pro.edit(f"<b>🚫 ʙᴀɴɴᴇᴅ ᴜsᴇʀs ʟɪsᴛ :</b>\n\n{banuser_list}", reply_markup=reply_markup, disable_web_page_preview = True)
+    await pro.edit(f"<b>›› ʙᴀɴɴᴇᴅ ᴜsᴇʀ's ʟɪsᴛ :</b>\n\n{banuser_list}", reply_markup=reply_markup, disable_web_page_preview = True)
 
 
 #=====================================================================================##
@@ -373,10 +373,10 @@ async def autoDelete_settings(client, message):
             timer = convert_time(await kingdb.get_del_timer())
             if await kingdb.get_auto_delete():
                 autodel_mode = on_txt
-                mode = '• ᴅɪsᴀʙʟᴇ❌'
+                mode = '• ᴅɪsᴀʙʟᴇ ❌'
             else:
                 autodel_mode = off_txt
-                mode = '• ᴇɴᴀʙʟᴇ✅'
+                mode = '• ᴇɴᴀʙʟᴇ ✅'
             
             await message.reply_photo(
                 photo = autodel_cmd_pic,
@@ -421,8 +421,8 @@ async def files_commands(client: Client, message: Message):
                 link = link
             ),
             reply_markup = InlineKeyboardMarkup([
-                [InlineKeyboardButton(f'• ᴘᴄ:{pcd}', callback_data='pc'), InlineKeyboardButton(f'• ʜᴄ:{hcd}', callback_data='hc')],
-                [InlineKeyboardButton(f'• ᴄʙ:{cbd}', callback_data='cb'), InlineKeyboardButton(f'• sʙ •', callback_data='setcb')],
+                [InlineKeyboardButton(f'• ᴘᴄ: {pcd}', callback_data='pc'), InlineKeyboardButton(f'• ʜᴄ: {hcd}', callback_data='hc')],
+                [InlineKeyboardButton(f'• ᴄʙ: {cbd}', callback_data='cb'), InlineKeyboardButton(f'• sʙ •', callback_data='setcb')],
                 [InlineKeyboardButton('• ʀᴇғʀᴇsʜ', callback_data='files_cmd'), InlineKeyboardButton('ᴄʟᴏsᴇ •', callback_data='close')]
             ]),
             message_effect_id = 5107584321108051014 #👍
@@ -454,6 +454,3 @@ async def handle_reqFsub(client: Client, message: Message):
     except Exception as e:
         reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
         await message.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote><b><i>ᴄᴏɴᴛᴀɴᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Urr_Sanjiii</i></b>", reply_markup=reply_markup)
-
-
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++

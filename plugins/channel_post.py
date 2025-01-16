@@ -1,4 +1,3 @@
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
 
 import asyncio
 from pyrogram import filters, Client
@@ -13,7 +12,7 @@ command_list = ['start', 'users', 'broadcast', 'batch', 'genlink', 'help', 'cmd'
 @Bot.on_message(~filters.command(command_list) & filters.private & is_admin)
 async def channel_post(client: Client, message: Message):
         
-    reply_text = await message.reply_text("<b><i>Processing....</i></b>", quote=True)
+    reply_text = await message.reply_text("<b><i>ᴘʀᴏᴄᴇssɪɴɢ....</i></b>", quote=True)
     try:
         post_message = await message.copy(chat_id=client.db_channel.id, disable_notification=True)
     except FloodWait as e:
@@ -21,7 +20,7 @@ async def channel_post(client: Client, message: Message):
         post_message = await message.copy(chat_id=client.db_channel.id, disable_notification=True)
     except Exception as e:
         print(e)
-        await reply_text.edit_text("<b>Something went wrong..!</b>")
+        await reply_text.edit_text("<b>sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ..!</b>")
         return
     converted_id = post_message.id * abs(client.db_channel.id)
     string = f"get-{converted_id}"
@@ -30,7 +29,7 @@ async def channel_post(client: Client, message: Message):
 
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("📫 Sʜᴀʀᴇ URL", url=f'https://telegram.me/share/url?url={link}')]])
 
-    await reply_text.edit(f"<b>ʙᴇʟᴏᴡ ɪs ʏᴏᴜʀ ʟɪɴᴋ::</b>\n<blockquote>{link}</blockquote>", reply_markup=reply_markup, disable_web_page_preview=True)
+    await reply_text.edit(f"<b>›› ʙᴇʟᴏᴡ ɪs ʏᴏᴜʀ ʟɪɴᴋ::</b>\n<blockquote>{link}</blockquote>", reply_markup=reply_markup, disable_web_page_preview=True)
 
     #if not DISABLE_CHANNEL_BUTTON:
         #await post_message.edit_reply_markup(reply_markup)
@@ -45,11 +44,9 @@ async def new_post(client: Client, message: Message):
     string = f"get-{converted_id}"
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("📫 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
     try:
         await message.edit_reply_markup(reply_markup)
     except Exception as e:
         print(e)
         pass"""
-
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
